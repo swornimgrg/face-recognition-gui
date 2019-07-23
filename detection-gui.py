@@ -17,7 +17,7 @@ head = Label(window, text= "Face Detection & Recognition", width=30, fg= "blue",
 head.place(x=20, y=20)
 #head.grid(row=0,column=0)
 
-path= 'C:\\Users\\Swornim\\Face_detection\\Images\\default.jpg'
+path = 'C:\\Users\\Swornim\\Face_detection\\Images\\default.jpg'
 
 photo = ImageTk.PhotoImage(Image.open(path))
 panel = tk.Label(window, image=photo)
@@ -33,10 +33,11 @@ def browse_image():
 	
 	try:
 		if path_to_image:
-			photo = ImageTk.PhotoImage(Image.open(path_to_image))
+			path1 = 'C:\\Users\\Swornim\\Face_detection\\Images\\default.jpg'
+			photo1 = ImageTk.PhotoImage(Image.open(path1))
 			print(path_to_image)
-			panel = tk.Label(window, image=photo)
-			photo = 
+			panel1 = tk.Label(window, image=photo1)
+			panel1.place(x= 50,y= 70)
 			#image_file_name = os.path.(path_to_image)
 			#file_to_copy = path_to_image
 			image_selected = True
