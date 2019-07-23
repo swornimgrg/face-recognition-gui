@@ -3,6 +3,7 @@ import numpy
 import cv2 
 import tkinter as tk
 from tkinter import *
+from tkinter import messagebox
 from tkinter import filedialog
 from PIL import ImageTk, Image
 
@@ -23,11 +24,6 @@ panel = tk.Label(window, image=photo)
 panel.place(x=350,y=70)
 #panel.grid(row=0, column=1)
 
-def load_photo(file_path):
-	image = image_path("file_path")
-	imgLabel.configure(image=image)
-	imageLabel.image= image
-
 def browse_image():
 	global image_file_name
 	global image_selected 
@@ -37,10 +33,14 @@ def browse_image():
 	
 	try:
 		if path_to_image:
-			image_file_name = os.path.basename(path_to_image)
-			file_to_copy = path_to_image
+			photo = ImageTk.PhotoImage(Image.open(path_to_image))
+			print(path_to_image)
+			panel = tk.Label(window, image=photo)
+			photo = 
+			#image_file_name = os.path.(path_to_image)
+			#file_to_copy = path_to_image
 			image_selected = True
-			load_photo(file_to_copy)
+
 	except IOError as err:
 		image_selected = False
 		messagebox.showinfo("File Error",err)
