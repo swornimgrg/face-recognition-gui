@@ -28,16 +28,17 @@ def browse_image():
 	global image_file_name
 	global image_selected 
 	global file_to_copy
+	global photo1
 
-	path_to_image = filedialog.askopenfilename(initialdir = "C:\\Users\\Swornim\\Face_detection\\Images",title = "Select file",filetypes = (("jpeg files","*.jpg"),("jpeg files","*.jpeg*")))
+	path_to_image = filedialog.askopenfilename(initialdir = "C:\\Users\\Swornim\\Face_detection\\Images\\yalefaces",title = "Select file",filetypes = (("jpeg files","*.jpg"),("jpeg files","*.jpeg*")))
 	
 	try:
 		if path_to_image:
-			path1 = 'C:\\Users\\Swornim\\Face_detection\\Images\\default.jpg'
-			photo1 = ImageTk.PhotoImage(Image.open(path1))
+			#path1 = 'C:\\Users\\Swornim\\Face_detection\\Images\\default.jpg'
+			photo1 = ImageTk.PhotoImage(Image.open(path_to_image))
 			print(path_to_image)
 			panel1 = tk.Label(window, image=photo1)
-			panel1.place(x= 50,y= 70)
+			panel1.place(x= 350,y= 70)
 			#image_file_name = os.path.(path_to_image)
 			#file_to_copy = path_to_image
 			image_selected = True
