@@ -57,11 +57,11 @@ def detect_face():
 		canvas.create_rectangle(x + 250, y + 70, x + w + 250, y + h + 70, outline = '#39ff14' , width = 2)
 
 		cropped =  img[y: y + h, x: x + w]
-		face_file_name = "faces/face_" + str(y) + ".jpg"
-		cv2.imwrite(face_file_name, cropped)
+		#face_file_name = "faces/face_" + str(y) + ".jpg"
+		#cv2.imwrite(face_file_name, cropped)
 
-	#print(cropped.shape)
-	#cv2.imshow("image", cropped)
+	print(cropped.shape)
+	cv2.imshow("image", cropped)
 	
 
 	
