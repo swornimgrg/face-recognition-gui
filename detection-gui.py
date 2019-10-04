@@ -51,6 +51,9 @@ def detect_face():
 	face_cascade = cv2.CascadeClassifier("C:\\Python\\Python37\\Lib\\site-packages\\cv2\\data\\haarcascade_frontalface_default.xml")
 	faces = face_cascade.detectMultiScale(img, scaleFactor = 1.16, minNeighbors = 5)
 
+	if (len(faces) == 0):
+		messagebox.showinfo("Detection Error", "Could not find face!")
+
 	print(faces)
 
 	for x,y,w,h in faces:
